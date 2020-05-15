@@ -8,8 +8,10 @@ import { bindActionCreators } from 'redux'
 
 import store, { history } from '../redux'
 
+import RepositoryList from '../components/repositorylist'
+import Repository from '../components/repository'
 import Home from '../components/home'
-import DummyView from '../components/dummy-view'
+import Main from '../components/main'
 import NotFound from '../components/404'
 
 import Startup from './startup'
@@ -77,16 +79,22 @@ const mapDispatchToPropsStartup = (dispatch) => bindActionCreators({}, dispatch)
 
 const StartupConnected = withRouter(connect(() => ({}), mapDispatchToPropsStartup)(Startup))
 export default (props) => {
+  // const [link, setLink] = useState('')
+  // const getLink = (value) => {
+  //   setLink(value)
+  // }
   return (
     <Provider store={store}>
       <ConnectedRouter history={history} location={props.location} context={props.context}>
         <StartupConnected>
           <Switch>
-            <Route exact path="/" component={() => <DummyView />} />
+            <Route exact path="/" component={() => <Main /* link={getLink} */ />} />
+            <Route exact path="/:username" component={() => <RepositoryList />} />
+            <Route exact path="/:username/:repositoryName" component={() => <Repository />} />
             <Route exact path="/dashboard" component={() => <Home />} />
             <Route exact path="/dashboard/profile/:user" component={() => <Home />} />
             <Route exact path="/dashboard/main" component={() => <Home />} />
-            <PrivateRouteConnected exact path="/hidden-route" component={() => <DummyView />} />
+            <PrivateRouteConnected exact path="/hidden-route" component={() => <Main />} />
             <Route component={() => <NotFound />} />
           </Switch>
         </StartupConnected>
