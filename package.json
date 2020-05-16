@@ -108,6 +108,7 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "showdown": "^1.9.1",
     "sockjs": "^0.3.19",
     "sockjs-client": "^1.4.0",
     "string-replace-webpack-plugin": "^0.1.3",
