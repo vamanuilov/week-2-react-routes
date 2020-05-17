@@ -1,14 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import logo from '../assets/images/github.png'
+
 const Header = (props) => {
   return (
     <nav className="flex w-screen items-center justify-between flex-wrap bg-teal-500 p-5">
-      {/* TODO Add imgSrc
-       * <img src={`pr${props.img}`} alt="avatar" />
-       */}
-      <div id="repository-name" className="flex items-center flex-shrink-0 text-2xl text-white">
-        {props.title}
+      <div className="flex flex-start">
+        <img
+          style={{
+            width: '60px',
+            height: '60px',
+            'border-radius': '50%'
+          }}
+          src={props.img ? props.img : logo}
+          alt="avatar"
+        />
+        <div
+          id="repository-name"
+          className="flex items-center flex-shrink-0 text-2xl text-white pl-4"
+        >
+          {props.title}
+        </div>
       </div>
       <div className="flex flex-col items-end text-white">
         {props.reposlist && (

@@ -1,0 +1,42 @@
+.description {
+    background-color: #d3fdfb59;
+    padding: 10px 15px;
+    margin: 15px 20% 0 20%;
+    border: 1px solid teal;
+    border-radius: 15px;
+    border-right: 5px solid teal;
+    border-top: 2px solid teal; 
+    h1 {
+        font-weight: bold;
+        font-size: 26px;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    h4 {
+        font-weight: bold;
+    }
+    code {
+        background: #edf2f7;
+        width: 0;
+        padding: 0 10px;
+        font-family: 'Liberation Mono','Courier New','monospace';
+    }
+    *:not(h1, h2, h3, h4, h5, li) {
+        margin-left:15px;
+    }
+    ul {
+        list-style: decimal;
+    }
+    ol {
+        list-style: disc;
+    }
+    pre{
+        width: 0;
+    }
+}
