@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Header from './header'
 import { history } from '../redux'
 
 const Input = (props) => {
@@ -45,7 +44,6 @@ const Main = () => {
   }
   return (
     <div>
-      <Header title="Search for GitHub repositories" />
       <div className="flex flex-col items-center text-2xl p-4 mt-10">
         <Input className="input" onChange={addLinkToButton} />
         <Button link={link} />
