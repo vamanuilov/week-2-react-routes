@@ -10,8 +10,8 @@ const RepositoryList = (props) => {
             className="flex rounded-md items-center bg-teal-500 hover:bg-teal-700 text-white m-1 p-4"
             key={repo.id}
             to={`/${repo.full_name}`}
-           >
-             {repo.name}
+          >
+            {repo.name}
           </Link>
         )
       })}
